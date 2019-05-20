@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Category {
+enum Category : String {
     case sports
     case science
     

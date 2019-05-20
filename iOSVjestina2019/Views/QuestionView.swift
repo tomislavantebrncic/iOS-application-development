@@ -17,11 +17,15 @@ class QuestionView: UIView {
     var answerD: UIButton?
     var question: Question?
     
+    weak var delegate: QuestionViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         commonInit()
     }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -46,34 +50,55 @@ class QuestionView: UIView {
         answerA?.setTitle("a", for: .normal)
         answerA?.titleLabel?.adjustsFontSizeToFitWidth = true
         answerA?.backgroundColor = UIColor.gray
+        answerA?.tag = 0
+        
         if let answer = answerA {
             self.addSubview(answer)
         }
+        answerA?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         answerB = UIButton(frame: CGRect(origin: CGPoint(x: w*0.55, y: h*0.3), size: CGSize(width:w*0.4, height: h*0.3)))
         answerB?.setTitle("b", for: .normal)
         answerB?.titleLabel?.adjustsFontSizeToFitWidth = true
         answerB?.backgroundColor = UIColor.gray
+        answerB?.tag = 1
+
         if let answer = answerB {
             self.addSubview(answer)
         }
-        
+        answerB?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
         answerC = UIButton(frame: CGRect(origin: CGPoint(x: w*0.05, y: h*0.65), size: CGSize(width:w*0.4, height: h*0.3)))
         answerC?.setTitle("c", for: .normal)
         answerC?.titleLabel?.adjustsFontSizeToFitWidth = true
         answerC?.backgroundColor = UIColor.gray
+        answerC?.tag = 2
+
         if let answer = answerC {
             self.addSubview(answer)
         }
+        answerC?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         answerD = UIButton(frame: CGRect(origin: CGPoint(x: w*0.55, y: h*0.65), size: CGSize(width:w*0.4, height: h*0.3)))
         answerD?.setTitle("d", for: .normal)
         answerD?.titleLabel?.adjustsFontSizeToFitWidth = true
         answerD?.backgroundColor = UIColor.gray
+        answerD?.tag = 3
+
         if let answer = answerD {
             self.addSubview(answer)
         }
-        
+        answerD?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
         self.backgroundColor = UIColor.clear
     }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        delegate?.answerClicked(self, index: sender.tag)
+    }
+    
+}
+
+protocol QuestionViewDelegate: NSObjectProtocol {
+    func answerClicked(_ questionView: QuestionView, index answer: Int)
 }
