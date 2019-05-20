@@ -103,6 +103,7 @@ class QuizService {
         request.setValue(UserDefaults.standard.string(forKey: "token"), forHTTPHeaderField: "Authorization")
         
         request.httpBody = parameters.percentEscaped().data(using: .utf8)
+        print(parameters)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data,
@@ -120,6 +121,7 @@ class QuizService {
                 return
             }
             
+            print("Successfully sent")
             completion(true)
         }
         

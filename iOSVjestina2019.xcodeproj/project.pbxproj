@@ -22,6 +22,7 @@
 		524EDD722292556800A35141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EDD702292556800A35141 /* LoginViewController.swift */; };
 		524EDD732292556800A35141 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524EDD712292556800A35141 /* LoginViewController.xib */; };
 		524EDD75229257D000A35141 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EDD74229257D000A35141 /* LoginService.swift */; };
+		524EDD772292CB3300A35141 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EDD762292CB3300A35141 /* ServerResponse.swift */; };
 		52888A3C22555C64001161BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52888A3B22555C64001161BF /* AppDelegate.swift */; };
 		52888A4122555C64001161BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52888A3F22555C64001161BF /* Main.storyboard */; };
 		52888A4322555C66001161BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52888A4222555C66001161BF /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		524EDD702292556800A35141 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		524EDD712292556800A35141 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		524EDD74229257D000A35141 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		524EDD762292CB3300A35141 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		52888A3822555C64001161BF /* iOSVjestina2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSVjestina2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52888A3B22555C64001161BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52888A4022555C64001161BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				52888A5822557831001161BF /* Quiz.swift */,
 				52888A5A22557D88001161BF /* Category.swift */,
 				52888A5C22558126001161BF /* Question.swift */,
+				524EDD762292CB3300A35141 /* ServerResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				524EDD682292214300A35141 /* QuizTableViewCell.swift in Sources */,
 				524EDD632292156400A35141 /* QuizzesViewModel.swift in Sources */,
 				524EDD6E2292409400A35141 /* SingleQuizViewController.swift in Sources */,
+				524EDD772292CB3300A35141 /* ServerResponse.swift in Sources */,
 				524EDD722292556800A35141 /* LoginViewController.swift in Sources */,
 				52163647225E87A5004DE5F0 /* InitialViewController.swift in Sources */,
 				524EDD5F229211DD00A35141 /* QuizzesTableSectionHeader.swift in Sources */,
